@@ -177,9 +177,7 @@ resource "azurerm_storage_account" "storage" {
 resource "azurerm_log_analytics_workspace" "law" {
   name                = "KCRNTLPCHWorkspace"  # Unique name for the Log Analytics Workspace
   location            = azurerm_resource_group.myRG.location
-  resource_group_name = azurerm_resource
-
-_group.myRG.name
+  resource_group_name = azurerm_resource_group.myRG.name
   sku                 = "PerGB2018"
 }
 
